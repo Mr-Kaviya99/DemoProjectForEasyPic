@@ -15,6 +15,6 @@ export class SellAnItemComponent implements OnInit {
   ngOnInit(): void {
   }
   navigateToRoute(link: string) {
-    this.router.navigate(['/home/process/promote-your-profile/' + link])
+    this.router.navigate(['/home/sell-an-item/' + link])
   }
 }
