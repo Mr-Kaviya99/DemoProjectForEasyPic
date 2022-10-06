@@ -4,7 +4,7 @@ import {HomePageComponent} from "./components/home-page-context/home-page/home-p
 import {SellAnItemComponent} from "./components/sell-an-item-context/sell-an-item/sell-an-item.component";
 
 const routes: Routes = [
-  {path: '', redirectTo: 'home-page', pathMatch: 'full'},
+  {path: '', redirectTo: '/home-page', pathMatch: 'full'},
   {path: 'home-page', component: HomePageComponent},
   {path: 'sell-an-item', component: SellAnItemComponent}
 ];
