@@ -9,7 +9,7 @@ import {ServiceContextComponent} from "./components/sell-an-item-context/sell-an
 import {AnimalsContextComponent} from "./components/sell-an-item-context/sell-an-item/inner-items/animals-context/animals-context.component";
 
 const routes: Routes = [
-  {path: '', redirectTo: 'home-page', pathMatch: 'full'},
+  {path: '', redirectTo: '/home-page', pathMatch: 'full'},
   {path: 'home-page', component: HomePageComponent},
   {
     path: 'sell-an-item', component: SellAnItemComponent, children: [
