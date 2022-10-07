@@ -2,8 +2,8 @@
   padding: 20px;
 }
 
-.left{
-  border-right: 1px solid black!important;
+.left {
+  border-right: 1px solid black !important;
 
 }
 
@@ -13,14 +13,53 @@
   }
 }
 
-.category {
-  margin: 10px 20px;
-  padding: 20px 10px;
-  border: 1px solid black;
-  width: 25vw;
-  border-radius: 5px;
+.list-border {
+  padding: 100px;
 }
 
-.category:hover {
-  background: lightgoldenrodyellow;
+.list {
+  margin: 0;
+  padding: 0;
+}
+
+.category-heading {
+  padding: 0 0 0 30px;
+}
+
+.category {
+  text-align: left;
+  color: #0074BA;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+
+  mat-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+  }
+
+  p {
+    margin: 0 10px;
+  }
+}
+
+.sub-category {
+  color: #2f3432;
+  font-weight: 500;
+  padding: 0 0 0 30px;
+}
+
+.active-route {
+  color: black;
+}
+
+.mat-icon {
+  color: red;
+}
+
+.arrow-outer {
+  flex: 11;
+  display: flex;
+  justify-content: right;
 }
