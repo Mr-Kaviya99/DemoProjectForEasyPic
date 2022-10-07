@@ -6,34 +6,48 @@
         <ul class="list">
           <li class="category" routerLink="/home/sell-an-item/vehicles" routerLinkActive="active-route"
               (click)="navigateToRoute('vehicles')">
-            <mat-icon>car_rental</mat-icon>
+            <mat-icon class="icon">car_rental</mat-icon>
+            <p>Vehicle</p>
+            <div class="arrow-outer">
+              <mat-icon class="arrow">chevron_right</mat-icon>
+            </div>
 
-            Vehicles
           </li>
           <hr>
           <li class="category" routerLink="/home/sell-an-item/electronics" routerLinkActive="active-route"
               (click)="navigateToRoute('electronics')">
             <mat-icon class="icon">cable</mat-icon>
-            Electronics
+            <p>Electronics</p>
+            <div class="arrow-outer">
+              <mat-icon class="arrow">chevron_right</mat-icon>
+            </div>
           </li>
           <hr>
           <li class="category" routerLink="/home/sell-an-item/property" routerLinkActive="active-route"
               (click)="navigateToRoute('property')">
             <mat-icon class="icon">real_estate_agent</mat-icon>
-            Property
-            <mat-icon class="arrow">chevron_right</mat-icon>
+            <p>Property</p>
+            <div class="arrow-outer">
+              <mat-icon class="arrow">chevron_right</mat-icon>
+            </div>
           </li>
           <hr>
           <li class="category" routerLink="/home/sell-an-item/service" routerLinkActive="active-route"
               (click)="navigateToRoute('service')">
             <mat-icon class="icon">support_agent</mat-icon>
-            Service
+            <p>Service</p>
+            <div class="arrow-outer">
+              <mat-icon class="arrow">chevron_right</mat-icon>
+            </div>
           </li>
           <hr>
           <li class="category" routerLink="/home/sell-an-item/animals" routerLinkActive="active-route"
               (click)="navigateToRoute('animals')">
             <mat-icon class="icon">pets</mat-icon>
-            Animals
+            <p>Animals</p>
+            <div class="arrow-outer">
+              <mat-icon class="arrow">chevron_right</mat-icon>
+            </div>
           </li>
           <hr>
         </ul>

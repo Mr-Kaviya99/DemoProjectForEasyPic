@@ -16,7 +16,8 @@
 .list-border {
   padding: 100px;
 }
-.list{
+
+.list {
   margin: 0;
   padding: 0;
 }
@@ -30,6 +31,17 @@
   color: #0074BA;
   border-radius: 5px;
   cursor: pointer;
+  display: flex;
+
+  mat-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+  }
+
+  p {
+    margin: 0 10px;
+  }
 }
 
 .sub-category {
@@ -42,5 +54,12 @@
   color: black;
 }
 
-.icon{
+.mat-icon {
+  color: red;
+}
+
+.arrow-outer {
+  flex: 11;
+  display: flex;
+  justify-content: right;
 }
