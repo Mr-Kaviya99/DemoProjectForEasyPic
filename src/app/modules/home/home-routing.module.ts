@@ -7,6 +7,7 @@ import {ElectronicsContextComponent} from "./components/sell-an-item-context/sel
 import {PropertyContextComponent} from "./components/sell-an-item-context/sell-an-item/inner-items/property-context/property-context.component";
 import {ServiceContextComponent} from "./components/sell-an-item-context/sell-an-item/inner-items/service-context/service-context.component";
 import {AnimalsContextComponent} from "./components/sell-an-item-context/sell-an-item/inner-items/animals-context/animals-context.component";
+import {PostAdFormComponent} from "./post-ad-form/post-ad-form/post-ad-form.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/home-page', pathMatch: 'full'},
@@ -19,6 +20,9 @@ const routes: Routes = [
       {path: 'service', component: ServiceContextComponent},
       {path: 'animals', component: AnimalsContextComponent}
     ]
+  },
+  {
+    path: 'post-ad/details',component: PostAdFormComponent
   }
 ];
 
