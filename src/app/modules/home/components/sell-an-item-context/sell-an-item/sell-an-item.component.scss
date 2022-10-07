@@ -2,8 +2,8 @@
   padding: 20px;
 }
 
-.left{
-  border-right: 1px solid black!important;
+.left {
+  border-right: 1px solid black !important;
 
 }
 
@@ -13,14 +13,34 @@
   }
 }
 
-.category {
-  margin: 10px 20px;
-  padding: 20px 10px;
-  border: 1px solid black;
-  width: 25vw;
-  border-radius: 5px;
+.list-border {
+  padding: 100px;
+}
+.list{
+  margin: 0;
+  padding: 0;
 }
 
-.category:hover {
-  background: lightgoldenrodyellow;
+.category-heading {
+  padding: 0 0 0 30px;
+}
+
+.category {
+  text-align: left;
+  color: #0074BA;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sub-category {
+  color: #2f3432;
+  font-weight: 500;
+  padding: 0 0 0 30px;
+}
+
+.active-route {
+  color: black;
+}
+
+.icon{
 }
