@@ -1,0 +1,19 @@
+<ng-container [formGroup]="form">
+  <br>
+  <label class="label">{{formItem.label}}</label>
+  <br>
+  <ng-container [ngSwitch]="formItem.type">
+
+    <input *ngSwitchCase="'text'" type="text" class="form-control" [formControlName]="formItem.id">
+
+    <input *ngSwitchCase="'radio'" id="radio" type="radio" [formControlName]="formItem.id">
+
+    <input *ngSwitchCase="'checkbox'" class="checkbox" type="checkbox" [formControlName]="formItem.id">
+
+    <select *ngSwitchCase="'select'" class="form-control" [formControlName]="formItem.id">
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+
+  </ng-container>
+</ng-container>

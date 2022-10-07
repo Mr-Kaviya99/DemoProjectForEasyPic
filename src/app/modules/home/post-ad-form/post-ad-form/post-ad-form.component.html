@@ -1,0 +1,8 @@
+<ng-contaner [formGroup]="myForm">
+  <ng-container *ngFor="let formItem of dynamicFormFieldModel" class="form-control">
+    <app-dynamic-form-field [formItem]="formItem"></app-dynamic-form-field>
+  </ng-container>
+
+  {{myForm.value | json}}
+
+</ng-contaner>
