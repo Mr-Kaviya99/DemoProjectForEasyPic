@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-animals-context',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnimalsContextComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  navigateToPostAd(category: any) {
+    this.router.navigate(['/home/post-ad/details'],{queryParams:{category: category}})
+  }
 }

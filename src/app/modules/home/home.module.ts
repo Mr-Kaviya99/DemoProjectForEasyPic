@@ -13,6 +13,10 @@ import { ElectronicsContextComponent } from './components/sell-an-item-context/s
 import { PropertyContextComponent } from './components/sell-an-item-context/sell-an-item/inner-items/property-context/property-context.component';
 import { ServiceContextComponent } from './components/sell-an-item-context/sell-an-item/inner-items/service-context/service-context.component';
 import { AnimalsContextComponent } from './components/sell-an-item-context/sell-an-item/inner-items/animals-context/animals-context.component';
+import { PostAdFormComponent } from './post-ad-form/post-ad-form/post-ad-form.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import { DynamicFormFieldComponent } from './post-ad-form/post-ad-form/Inner-items/dynamic-form-field/dynamic-form-field.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 
 @NgModule({
@@ -27,11 +31,15 @@ import { AnimalsContextComponent } from './components/sell-an-item-context/sell-
     PropertyContextComponent,
     ServiceContextComponent,
     AnimalsContextComponent,
+    PostAdFormComponent,
+    DynamicFormFieldComponent,
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    MatIconModule
+    MatIconModule,
+    ReactiveFormsModule,
+    MatDialogModule
   ]
 })
 export class HomeModule {

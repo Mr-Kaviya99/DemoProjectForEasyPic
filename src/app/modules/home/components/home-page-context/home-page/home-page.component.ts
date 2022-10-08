@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
+import {MatDialog} from "@angular/material/dialog";
+import {SellAnItemComponent} from "../../sell-an-item-context/sell-an-item/sell-an-item.component";
 
 @Component({
   selector: 'app-home-page',
@@ -9,14 +11,18 @@ import {Router} from "@angular/router";
 export class HomePageComponent implements OnInit {
 
   constructor(
-    public route: Router
+    public route: Router,
+    public dialog: MatDialog,
   ) {
   }
 
   ngOnInit(): void {
   }
-
-  loadSellAnItem() {
-    this.route.navigate(['/home/sell-an-item'])
+  sellAnItemPopUp(event: MouseEvent): void {
+    const dialogRef = this.dialog.open(SellAnItemComponent, {
+      width: '1000px',
+      enterAnimationDuration:'1000ms',
+      exitAnimationDuration:'500ms',
+    });
   }
 }
