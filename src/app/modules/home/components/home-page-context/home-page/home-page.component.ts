@@ -20,7 +20,9 @@ export class HomePageComponent implements OnInit {
   }
   sellAnItemPopUp(event: MouseEvent): void {
     const dialogRef = this.dialog.open(SellAnItemComponent, {
-      width: '1000px'
+      width: '1000px',
+      enterAnimationDuration:'1000ms',
+      exitAnimationDuration:'500ms',
     });
   }
 }
