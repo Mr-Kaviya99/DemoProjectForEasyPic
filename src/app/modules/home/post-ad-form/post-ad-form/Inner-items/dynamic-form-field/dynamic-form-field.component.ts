@@ -10,12 +10,17 @@ import {FormGroup, FormGroupDirective} from "@angular/forms";
 export class DynamicFormFieldComponent implements OnInit {
   @Input() formItem!: DynamicFormFieldModel
   form!: FormGroup
+  // values: { [p: string]: string } | undefined = [];
 
   constructor(private rootFormGroup: FormGroupDirective) {
     this.form = this.rootFormGroup.control
   }
 
   ngOnInit(): void {
+    // this.values = this.formItem.values
+    console.log("FormItem")
+    console.log(this.formItem.values)
+    console.log("-----------------")
   }
 
 }

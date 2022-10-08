@@ -17,6 +17,9 @@ import { PostAdFormComponent } from './post-ad-form/post-ad-form/post-ad-form.co
 import {ReactiveFormsModule} from "@angular/forms";
 import { DynamicFormFieldComponent } from './post-ad-form/post-ad-form/Inner-items/dynamic-form-field/dynamic-form-field.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import {MatRadioModule} from "@angular/material/radio";
+import {MatFormField, MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
 
 
 @NgModule({
@@ -39,7 +42,10 @@ import {MatDialogModule} from "@angular/material/dialog";
     HomeRoutingModule,
     MatIconModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatRadioModule,
+    MatFormFieldModule,
+    MatSelectModule
   ]
 })
 export class HomeModule {
