@@ -16,6 +16,7 @@ import { AnimalsContextComponent } from './components/sell-an-item-context/sell-
 import { PostAdFormComponent } from './post-ad-form/post-ad-form/post-ad-form.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { DynamicFormFieldComponent } from './post-ad-form/post-ad-form/Inner-items/dynamic-form-field/dynamic-form-field.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { DynamicFormFieldComponent } from './post-ad-form/post-ad-form/Inner-ite
     CommonModule,
     HomeRoutingModule,
     MatIconModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule
   ]
 })
 export class HomeModule {

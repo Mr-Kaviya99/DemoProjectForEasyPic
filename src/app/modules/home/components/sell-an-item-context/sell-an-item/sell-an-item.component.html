@@ -1,61 +1,61 @@
 <div class="sell-an-item-outer">
-  <div class="row">
-    <div class="left col-12 col-md-6 ">
-      <div class="list-outer">
-        <h2 class="category-heading">Select a Category</h2>
-        <ul class="list">
-          <li class="category" routerLink="/home/sell-an-item/vehicles" routerLinkActive="active-route"
-              (click)="navigateToRoute('vehicles')">
-            <mat-icon class="icon">car_rental</mat-icon>
-            <p>Vehicle</p>
-            <div class="arrow-outer">
-              <mat-icon class="arrow">chevron_right</mat-icon>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="left col-12 col-md-6 ">
+        <div class="list-outer">
+          <h2 class="category-heading">Select a Category</h2>
+          <ul class="list">
+            <li class="category" (click)="setVehiclesVisible()">
+              <mat-icon class="icon">car_rental</mat-icon>
+              <p>Vehicle</p>
+              <div class="arrow-outer">
+                <mat-icon class="arrow">chevron_right</mat-icon>
+              </div>
 
-          </li>
-          <hr>
-          <li class="category" routerLink="/home/sell-an-item/electronics" routerLinkActive="active-route"
-              (click)="navigateToRoute('electronics')">
-            <mat-icon class="icon">cable</mat-icon>
-            <p>Electronics</p>
-            <div class="arrow-outer">
-              <mat-icon class="arrow">chevron_right</mat-icon>
-            </div>
-          </li>
-          <hr>
-          <li class="category" routerLink="/home/sell-an-item/property" routerLinkActive="active-route"
-              (click)="navigateToRoute('property')">
-            <mat-icon class="icon">real_estate_agent</mat-icon>
-            <p>Property</p>
-            <div class="arrow-outer">
-              <mat-icon class="arrow">chevron_right</mat-icon>
-            </div>
-          </li>
-          <hr>
-          <li class="category" routerLink="/home/sell-an-item/service" routerLinkActive="active-route"
-              (click)="navigateToRoute('service')">
-            <mat-icon class="icon">support_agent</mat-icon>
-            <p>Service</p>
-            <div class="arrow-outer">
-              <mat-icon class="arrow">chevron_right</mat-icon>
-            </div>
-          </li>
-          <hr>
-          <li class="category" routerLink="/home/sell-an-item/animals" routerLinkActive="active-route"
-              (click)="navigateToRoute('animals')">
-            <mat-icon  class="icon">pets</mat-icon>
-            <p>Animals</p>
-            <div class="arrow-outer">
-              <mat-icon class="arrow">chevron_right</mat-icon>
-            </div>
-          </li>
-          <hr>
-        </ul>
+            </li>
+            <hr>
+            <li class="category" (click)="setElectronicVisible()">
+              <mat-icon class="icon">cable</mat-icon>
+              <p>Electronics</p>
+              <div class="arrow-outer">
+                <mat-icon class="arrow">chevron_right</mat-icon>
+              </div>
+            </li>
+            <hr>
+            <li class="category" (click)="setPropertyVisible()">
+              <mat-icon class="icon">real_estate_agent</mat-icon>
+              <p>Property</p>
+              <div class="arrow-outer">
+                <mat-icon class="arrow">chevron_right</mat-icon>
+              </div>
+            </li>
+            <hr>
+            <li class="category" (click)="setServiceVisible()">
+              <mat-icon class="icon">support_agent</mat-icon>
+              <p>Service</p>
+              <div class="arrow-outer">
+                <mat-icon class="arrow">chevron_right</mat-icon>
+              </div>
+            </li>
+            <hr>
+            <li class="category" (click)="setAnimalsVisible()">
+              <mat-icon class="icon">pets</mat-icon>
+              <p>Animals</p>
+              <div class="arrow-outer">
+                <mat-icon class="arrow">chevron_right</mat-icon>
+              </div>
+            </li>
+            <hr>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="right col-12 col-md-6">
-      <h2 class="sub-category">Select a subcategory</h2>
-      <router-outlet></router-outlet>
+      <div class="right col-12 col-md-6">
+        <app-vehicles-context  *ngIf="vehicles" mat-dialog-close></app-vehicles-context>
+        <app-electronics-context *ngIf="electronics" mat-dialog-close></app-electronics-context>
+        <app-property-context *ngIf="property" mat-dialog-close></app-property-context>
+        <app-service-context *ngIf="service" mat-dialog-close></app-service-context>
+        <app-animals-context *ngIf="animals" mat-dialog-close></app-animals-context>
+      </div>
     </div>
   </div>
 </div>
