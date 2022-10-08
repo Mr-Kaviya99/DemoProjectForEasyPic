@@ -6,14 +6,24 @@
 
     <input *ngSwitchCase="'text'" type="text" class="form-control" [formControlName]="formItem.id">
 
-    <input *ngSwitchCase="'radio'" id="radio" type="radio" [formControlName]="formItem.id">
+    <!--    <label for="radio">{{formItem.values[0]?.label}}</label>-->
+    <div class="radio-buttons" *ngSwitchCase="'radio'">
+      <mat-radio-group aria-label="Select an option" [formControlName]="formItem.id">
+        <mat-radio-button *ngFor="let value of formItem.values | keyvalue" [value]="value.key">{{value.value}}</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div class="select-outer" *ngSwitchCase="'select'">
+      <mat-form-field appearance="outline">
+        <mat-select [formControlName]="formItem.id">
+          <mat-option *ngFor="let value of formItem.values | keyvalue" [value]="value.key">
+            {{value.value}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
 
     <input *ngSwitchCase="'checkbox'" class="checkbox" type="checkbox" [formControlName]="formItem.id">
-
-    <select *ngSwitchCase="'select'" class="form-control" [formControlName]="formItem.id">
-      <option value="1">1</option>
-      <option value="2">2</option>
-    </select>
 
   </ng-container>
 </ng-container>
