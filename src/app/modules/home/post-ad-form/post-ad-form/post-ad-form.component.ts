@@ -68,16 +68,16 @@ export class PostAdFormComponent implements OnInit {
         label: 'Edition',
         type: 'text',
       },
-      {
-        id: 'features',
-        label: 'Features',
-        type: 'checkbox',
-        values: {
-          'oppo': "Oppo",
-          'samsung': "Samsung",
-          'vivo': "Vivo"
-        }
-      },
+      // {
+      //   id: 'features',
+      //   label: 'Features',
+      //   type: 'checkbox',
+      //   values: {
+      //     'oppo': "Oppo",
+      //     'samsung': "Samsung",
+      //     'vivo': "Vivo"
+      //   }
+      // },
     ]
     this.dynamicFormFieldModel.forEach(formItem => {
       this.myForm.addControl(formItem.id, this.fb.control([]))

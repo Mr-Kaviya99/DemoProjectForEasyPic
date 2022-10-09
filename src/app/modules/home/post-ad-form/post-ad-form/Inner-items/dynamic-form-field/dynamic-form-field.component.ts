@@ -18,22 +18,18 @@ export class DynamicFormFieldComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.values = this.formItem.values
-    console.log("FormItem")
     console.log(this.formItem.values)
-    console.log("-----------------")
   }
 
   pushCheckBoxValue(event: any, value: any) {
-    if (event === false){
-      this.removeValue(value)
-    }else {
-      this.checkboxArray.push(value.key);
-    }
-    console.log(this.checkboxArray)
+    // if (event === false){
+    //   this.removeValue(value)
+    // }else {
+    //   this.checkboxArray.push(value.key);
+    // }
+    // console.log(this.checkboxArray)
   }
   removeValue(value: any) {
-
-    this.checkboxArray.splice(value.key,1);
+    // this.checkboxArray.splice(value.key,1);
   }
 }
