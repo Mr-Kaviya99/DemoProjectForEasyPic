@@ -27,7 +27,7 @@ export class PostAdFormComponent implements OnInit {
       .subscribe(params => {
           console.log(params['category']);
           this.categoryCode = params['category'];
-          console.log('category Code : '+this.categoryCode);
+          console.log('category Code : ' + this.categoryCode);
         }
       );
     this.myForm = this.fb.group({})
@@ -52,7 +52,32 @@ export class PostAdFormComponent implements OnInit {
           'vivo': "Vivo"
         }
 
-      }
+      },
+      {
+        id: 'model',
+        label: 'Model',
+        type: 'select',
+        values: {
+          'oppo': "Oppo",
+          'samsung': "Samsung",
+          'vivo': "Vivo"
+        }
+      },
+      {
+        id: 'edition',
+        label: 'Edition',
+        type: 'text',
+      },
+      {
+        id: 'features',
+        label: 'Features',
+        type: 'checkbox',
+        values: {
+          'oppo': "Oppo",
+          'samsung': "Samsung",
+          'vivo': "Vivo"
+        }
+      },
     ]
     this.dynamicFormFieldModel.forEach(formItem => {
       this.myForm.addControl(formItem.id, this.fb.control([]))

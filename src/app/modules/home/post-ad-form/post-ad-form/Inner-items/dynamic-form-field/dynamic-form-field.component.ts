@@ -11,6 +11,7 @@ export class DynamicFormFieldComponent implements OnInit {
   @Input() formItem!: DynamicFormFieldModel
   form!: FormGroup
   // values: { [p: string]: string } | undefined = [];
+  checkboxArray: any[] = [];
 
   constructor(private rootFormGroup: FormGroupDirective) {
     this.form = this.rootFormGroup.control
@@ -23,4 +24,16 @@ export class DynamicFormFieldComponent implements OnInit {
     console.log("-----------------")
   }
 
+  pushCheckBoxValue(event: any, value: any) {
+    if (event === false){
+      this.removeValue(value)
+    }else {
+      this.checkboxArray.push(value.key);
+    }
+    console.log(this.checkboxArray)
+  }
+  removeValue(value: any) {
+
+    this.checkboxArray.splice(value.key,1);
+  }
 }
