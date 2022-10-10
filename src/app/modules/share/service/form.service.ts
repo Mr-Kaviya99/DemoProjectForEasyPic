@@ -22,6 +22,6 @@ export class FormService {
   newAdDetails(categoryCode: string, myForm: FormGroup) {
     console.log(myForm)
     console.log(myForm.value)
-    return this.http.post<any>(this.baseUrl + '',{});
+    return this.http.post<any>('',{});
   }
 }
