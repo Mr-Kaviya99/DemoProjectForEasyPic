@@ -1,0 +1,22 @@
+[
+  {
+    "id": "condition",
+    "label": "Condition",
+    "type": "radio",
+    "valuess": {
+      "new": "New",
+      "reconditioned": "Reconditioned",
+      "used": "Used"
+    }
+  },
+  {
+    "id": "brand",
+    "label": "Brand",
+    "type": "select",
+    "valuess": {
+      "oppo": "Oppo",
+      "samsung": "Samsung",
+      "vivo": "Vivo"
+    }
+  }
+]

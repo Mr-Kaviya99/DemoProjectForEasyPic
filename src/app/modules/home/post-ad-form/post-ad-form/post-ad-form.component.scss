@@ -1,15 +1,30 @@
-.form-control{
+.form-control {
   max-width: 25vw;
   margin: 10px;
 }
-#radio{
-  width: fit-content!important;
+
+#radio {
+  width: fit-content !important;
   margin-left: 15px;
 }
 
-.checkbox{
+.checkbox {
   margin-left: 15px;
 }
-.label{
+
+.label {
   margin-left: 15px;
+}
+
+.submit-button{
+  padding: 0;
+  text-align: right;
+  width: 100%;
+  background-color: white;
+  border: none;
+  button{
+    background-color: #25a125;
+    color: white;
+    padding: 0 20px;
+  }
 }
