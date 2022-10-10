@@ -16,7 +16,7 @@
 
         <div class="radio-buttons" *ngSwitchCase="'radio'">
           <mat-radio-group class="row" aria-label="Select an option" [formControlName]="formItem.id">
-            <mat-radio-button class="col-12 col-sm-6" *ngFor="let value of formItem.values | keyvalue"
+            <mat-radio-button class="button col-12 col-sm-6" *ngFor="let value of formItem.valuess | keyvalue"
                               [value]="value.key">{{value.value}}</mat-radio-button>
           </mat-radio-group>
         </div>
@@ -24,19 +24,19 @@
         <div class="select-outer mat-form-field-outer" *ngSwitchCase="'select'">
           <mat-form-field class="full-width" appearance="outline">
             <mat-select [formControlName]="formItem.id">
-              <mat-option *ngFor="let value of formItem.values | keyvalue" [value]="value.key">
+              <mat-option *ngFor="let value of formItem.valuess | keyvalue" [value]="value.key">
                 {{value.value}}
               </mat-option>
             </mat-select>
           </mat-form-field>
         </div>
 
-       <!-- <div class="checkbox-outer" *ngSwitchCase="'checkbox'">
+        <div class="checkbox-outer" *ngSwitchCase="'checkbox'">
 
-          <mat-checkbox *ngFor="let value of formItem.values | keyvalue" #checkbox
+          <mat-checkbox class="col-6" *ngFor="let value of formItem.valuess | keyvalue" #checkbox
                         (change)='pushCheckBoxValue(checkbox.checked,value)'>{{value.value}}</mat-checkbox>
 
-        </div>-->
+        </div>
 
         <!--        <input *ngSwitchCase="'checkbox'" class="checkbox" type="checkbox" [formControlName]="formItem.id">-->
 

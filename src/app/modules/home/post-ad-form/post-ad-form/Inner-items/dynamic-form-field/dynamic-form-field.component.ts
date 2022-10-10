@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {DynamicFormFieldModel} from "../../dynamic-form-field-model";
+import {DynamicFormFieldModel} from "../../../../../share/dynamic-form-field-model";
 import {FormGroup, FormGroupDirective} from "@angular/forms";
 
 @Component({
@@ -18,7 +18,7 @@ export class DynamicFormFieldComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.formItem.values)
+    console.log(this.formItem.valuess)
   }
 
   pushCheckBoxValue(event: any, value: any) {

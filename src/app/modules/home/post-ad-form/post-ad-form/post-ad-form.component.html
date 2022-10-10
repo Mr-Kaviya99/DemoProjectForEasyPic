@@ -1,8 +1,14 @@
 <ng-contaner [formGroup]="myForm">
   <ng-container *ngFor="let formItem of dynamicFormFieldModel" class="form-control">
     <app-dynamic-form-field [formItem]="formItem"></app-dynamic-form-field>
-  </ng-container>
 
-  {{myForm.value | json}}
+  </ng-container>
+  <div class="container">
+    <button class="submit-button">
+      <button mat-flat-button (click)="submitData()">Submit</button>
+    </button>
+  </div>
+
+<!--  {{myForm.value | json}}-->
 
 </ng-contaner>
